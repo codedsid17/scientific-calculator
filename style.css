@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+/* LIGHT MODE */
+body.light {
+  background: #FED8A6;
+}
+
+/* DARK MODE */
+body.dark {
+  background: #9B7D61;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.calculator {
+  width: 360px;
+  background: #E9D7C0;
+  padding: 18px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+body.dark .calculator {
+  background: #DAA38F;
+}
+
+/* DISPLAY */
+#display {
+  width: 100%;
+  height: 65px;
+  border-radius: 18px;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 24px;
+  padding: 12px;
+  text-align: right;
+  background: #FED8A6;
+  color: #5a3a1a;
+}
+
+body.dark #display {
+  background: #E9D7C0;
+}
+
+/* BUTTON GRID */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  height: 55px;
+  border-radius: 16px;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  background: #92ADA4;
+  color: #1e1e1e;
+
+  transition: 
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(63,0,19);
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+.equal {
+  background: #9B7D61;
+  color: #fff;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+/* DARK MODE BUTTONS */
+body.dark button {
+  background: #E9D7C0;
+  color: #3b240f;
+}
+
+body.dark .equal {
+  background: #92ADA4;
+  color: #1e1e1e;
+}
+
+/* SIDE TOGGLE */
+.side-toggle {
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  background: #92ADA4;
+}

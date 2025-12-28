@@ -22,4 +22,4 @@ A **mobile-style scientific calculator** built using **HTML, CSS, and JavaScript
 - JavaScript (Vanilla)
 
 ## 🚀 Live Demo
-Enable **GitHub Pages** to see it live:
+https://codedsid17.github.io/scientific-calculator/
